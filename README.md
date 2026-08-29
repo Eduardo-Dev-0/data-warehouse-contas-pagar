@@ -29,34 +29,37 @@ A proposta foi transformar dados originalmente transacionais em uma estrutura or
 - Criar Views para consultas analíticas;
 - Responder perguntas de negócio utilizando SQL;
 - Desenvolver painéis no Power BI.
-
+  
 ---
 
-Banco Corporativo
-       │
-       ▼
+🔄 Pipeline do projeto
+
+Origem
+
+↓
+
 Análise Exploratória
-       │
-       ▼
-Validação dos Dados
-       │
-       ▼
-Modelagem Dimensional
-       │
-       ▼
-Carga das Dimensões
-       │
-       ▼
-Carga da Tabela Fato
-       │
-       ▼
-Validação Origem × DW
-       │
-       ▼
-Views Analíticas
-       │
-       ▼
+
+↓
+
+Tratamento / ETL
+
+↓
+
+Dimensões
+
+↓
+
+Tabela Fato
+
+↓
+
+Views
+
+↓
+
 Análises de Negócio
-       │
-       ▼
+
+↓
+
 Power BI
