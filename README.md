@@ -34,47 +34,31 @@ A proposta foi transformar dados originalmente transacionais em uma estrutura or
 
 ## 🏗️ Arquitetura do projeto
 
-O projeto foi estruturado seguindo o seguinte fluxo:
-
-'
-                    BANCO CORPORATIVO
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │ Análise Exploratória│
-                │       dos Dados     │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │ Validação e análise │
-                │    da qualidade     │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │ Modelagem Dimensional│
-                │    Esquema Estrela  │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │        ETL          │
-                │ Extração / Carga    │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │   DATA WAREHOUSE    │
-                │ dw_pagamento_contas │
-                └──────────┬──────────┘
-                           │
-                 ┌─────────┴─────────┐
-                 ▼                   ▼
-          Views Analíticas       SQL Analítico
-                 │                   │
-                 └─────────┬─────────┘
-                           ▼
-                    ┌─────────────┐
-                    │  Power BI   │
-                    └─────────────┘        '
+Banco Corporativo
+       │
+       ▼
+Análise Exploratória
+       │
+       ▼
+Validação dos Dados
+       │
+       ▼
+Modelagem Dimensional
+       │
+       ▼
+Carga das Dimensões
+       │
+       ▼
+Carga da Tabela Fato
+       │
+       ▼
+Validação Origem × DW
+       │
+       ▼
+Views Analíticas
+       │
+       ▼
+Análises de Negócio
+       │
+       ▼
+Power BI
