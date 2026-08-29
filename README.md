@@ -37,28 +37,37 @@ A proposta foi transformar dados originalmente transacionais em uma estrutura or
 Banco Corporativo
        │
        ▼
+       
 Análise Exploratória
        │
        ▼
+       
 Validação dos Dados
        │
        ▼
+       
 Modelagem Dimensional
        │
        ▼
+       
 Carga das Dimensões
        │
        ▼
+       
 Carga da Tabela Fato
        │
        ▼
+       
 Validação Origem × DW
        │
        ▼
+       
 Views Analíticas
        │
        ▼
+       
 Análises de Negócio
        │
        ▼
 Power BI
+
