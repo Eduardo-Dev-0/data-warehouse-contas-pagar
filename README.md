@@ -1,160 +1,80 @@
-\# 📊 Data Warehouse Financeiro — Contas a Pagar
-
-
+# 📊 Data Warehouse Financeiro — Contas a Pagar
 
 > Projeto acadêmico de Data Analytics desenvolvido a partir de um banco de dados corporativo, envolvendo análise exploratória, modelagem dimensional, processo ETL, consultas analíticas e visualização dos dados no Power BI.
 
+---
 
+## 📌 Sobre o projeto
 
-\---
-
-
-
-\## 📌 Sobre o projeto
-
-
-
-Este projeto teve como objetivo desenvolver um \*\*Data Warehouse (DW)\*\* para análise do domínio de \*\*Contas a Pagar\*\* de uma base de dados corporativa.
-
-
+Este projeto teve como objetivo desenvolver um **Data Warehouse (DW)** para análise do domínio de **Contas a Pagar** de uma base de dados corporativa.
 
 O trabalho foi desenvolvido seguindo um fluxo completo de tratamento e disponibilização dos dados:
 
-
-
-\*\*Banco de dados corporativo → Análise Exploratória → Validação → Modelagem Dimensional → ETL → Data Warehouse → Views Analíticas → Power BI\*\*
-
-
+**Banco de dados corporativo → Análise Exploratória → Validação → Modelagem Dimensional → ETL → Data Warehouse → Views Analíticas → Power BI**
 
 A proposta foi transformar dados originalmente transacionais em uma estrutura orientada à análise, permitindo visualizar informações financeiras sob diferentes perspectivas.
 
+---
 
+## 🎯 Objetivos
 
-\---
+- Compreender a estrutura dos dados corporativos;
+- Realizar uma Análise Exploratória dos Dados (AED);
+- Validar a qualidade e consistência dos dados;
+- Definir o escopo de Contas a Pagar;
+- Construir um modelo dimensional em esquema estrela;
+- Criar dimensões e tabela fato;
+- Realizar o processo de carga das dimensões e da fato;
+- Validar a consistência entre a origem e o Data Warehouse;
+- Criar Views para consultas analíticas;
+- Responder perguntas de negócio utilizando SQL;
+- Desenvolver painéis no Power BI.
 
+---
 
-
-\## 🎯 Objetivos
-
-
-
-\- Compreender a estrutura dos dados corporativos;
-
-\- Realizar uma Análise Exploratória dos Dados (AED);
-
-\- Validar a qualidade e consistência dos dados;
-
-\- Definir o escopo de Contas a Pagar;
-
-\- Construir um modelo dimensional em esquema estrela;
-
-\- Criar dimensões e tabela fato;
-
-\- Realizar o processo de carga das dimensões e da fato;
-
-\- Validar a consistência entre a origem e o Data Warehouse;
-
-\- Criar Views para consultas analíticas;
-
-\- Responder perguntas de negócio utilizando SQL;
-
-\- Desenvolver painéis no Power BI.
-
-
-
-\---
-
-
-
-\## 🏗️ Arquitetura do projeto
-
-
+## 🏗️ Arquitetura do projeto
 
 O projeto foi estruturado seguindo o seguinte fluxo:
 
-
-
-```text
-
-&#x20;                   BANCO CORPORATIVO
-
-&#x20;                          │
-
-&#x20;                          ▼
-
-&#x20;               ┌─────────────────────┐
-
-&#x20;               │ Análise Exploratória│
-
-&#x20;               │       dos Dados     │
-
-&#x20;               └──────────┬──────────┘
-
-&#x20;                          │
-
-&#x20;                          ▼
-
-&#x20;               ┌─────────────────────┐
-
-&#x20;               │ Validação e análise │
-
-&#x20;               │    da qualidade     │
-
-&#x20;               └──────────┬──────────┘
-
-&#x20;                          │
-
-&#x20;                          ▼
-
-&#x20;               ┌─────────────────────┐
-
-&#x20;               │ Modelagem Dimensional│
-
-&#x20;               │    Esquema Estrela  │
-
-&#x20;               └──────────┬──────────┘
-
-&#x20;                          │
-
-&#x20;                          ▼
-
-&#x20;               ┌─────────────────────┐
-
-&#x20;               │        ETL          │
-
-&#x20;               │ Extração / Carga    │
-
-&#x20;               └──────────┬──────────┘
-
-&#x20;                          │
-
-&#x20;                          ▼
-
-&#x20;               ┌─────────────────────┐
-
-&#x20;               │   DATA WAREHOUSE    │
-
-&#x20;               │ dw\_pagamento\_contas │
-
-&#x20;               └──────────┬──────────┘
-
-&#x20;                          │
-
-&#x20;                ┌─────────┴─────────┐
-
-&#x20;                ▼                   ▼
-
-&#x20;         Views Analíticas       SQL Analítico
-
-&#x20;                │                   │
-
-&#x20;                └─────────┬─────────┘
-
-&#x20;                          ▼
-
-&#x20;                   ┌─────────────┐
-
-&#x20;                   │  Power BI   │
-
-&#x20;                   └─────────────┘
-
+'
+                    BANCO CORPORATIVO
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Análise Exploratória│
+                │       dos Dados     │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Validação e análise │
+                │    da qualidade     │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Modelagem Dimensional│
+                │    Esquema Estrela  │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │        ETL          │
+                │ Extração / Carga    │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │   DATA WAREHOUSE    │
+                │ dw_pagamento_contas │
+                └──────────┬──────────┘
+                           │
+                 ┌─────────┴─────────┐
+                 ▼                   ▼
+          Views Analíticas       SQL Analítico
+                 │                   │
+                 └─────────┬─────────┘
+                           ▼
+                    ┌─────────────┐
+                    │  Power BI   │
+                    └─────────────┘        '
